@@ -26,8 +26,11 @@ for row in rows:
     market_cap = cells[2].find(text=True)
     price = cells[3].find(text=True)
     volume = cells[4].find(text=True)
+    circulating_supply = cells[5].find(text=True)
+    change = cells[6].find(text=True)
+    graph = cells[7].find(text=True)
     
-    top_capitalization_position = { 'rank':rank , 'name': name, 'market_cap': market_cap, 'price': price, 'volume': volume}
+    top_capitalization_position = { 'rank':rank , 'name': name, 'market_cap': market_cap, 'price': price, 'volume': volume,'circulating_supply':circulating_supply,'change':change,'graph':graph}
     
     top_capitalization_list.append(top_capitalization_position)
 
