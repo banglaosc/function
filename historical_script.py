@@ -43,7 +43,7 @@ for row in rows:
     
     
 def get_3_month_bitcoin_historical_data():
-    return historical_list;
+    return historical_list[::-1];
 
 
 
