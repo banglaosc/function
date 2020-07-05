@@ -5,10 +5,12 @@ from datetime import datetime, timedelta,date
 
 today_date = date.today()
 
+
 past_date_before_3_months = today_date - timedelta(days = 90) 
 
 query_end_date = str(today_date).replace('-','')
 query_start_date = str(past_date_before_3_months).replace('-','')
+
 
 url = "https://coinmarketcap.com/currencies/bitcoin/historical-data/?start={0}&end={1}".format(query_start_date,query_end_date)
 
@@ -43,7 +45,7 @@ for row in rows:
     
     
 def get_3_month_bitcoin_historical_data():
-    return historical_list[::-1];
+    return historical_list;
 
 
 
